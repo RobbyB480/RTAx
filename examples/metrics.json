@@ -1,0 +1,5 @@
+{
+  "counts": { "violations": 1, "by_category": { "prompt_injection": 1 } },
+  "max_severity": "medium",
+  "ok": false
+}
