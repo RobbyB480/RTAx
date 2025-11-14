@@ -1,0 +1,5 @@
+{"t":"2025-01-01T00:00:00Z","type":"start","suite":"smoke_demo","model":"model_alias"}
+{"t":"2025-01-01T00:00:01Z","type":"message","role":"user","content":"<benign prompt>"}
+{"t":"2025-01-01T00:00:02Z","type":"message","role":"assistant","content":"<benign reply>"}
+{"t":"2025-01-01T00:00:03Z","type":"message","role":"assistant","content":"<example that triggers category: prompt_injection>"}
+{"t":"2025-01-01T00:00:04Z","type":"end","ok":true}
