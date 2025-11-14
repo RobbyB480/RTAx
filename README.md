@@ -44,15 +44,30 @@ flowchart LR
   A --> B
 ```
 
+## Try the demo (no secrets)
+- [`examples/events.jsonl`](examples/events.jsonl)
+- [`examples/metrics.json`](examples/metrics.json)
+- [`examples/report/index.md`](examples/report/index.md)
 
-```markdown
-# FILE: README_addon_how_diffs.md
+These are synthetic, privacy-safe artifacts that illustrate the contracts RTAx uses.
+
+## Schemas
+- [`docs/schema/events.schema.json`](docs/schema/events.schema.json) — one JSON object per line (JSONL)
+- [`docs/schema/metrics.schema.json`](docs/schema/metrics.schema.json) — aggregate counts & status
+
+## UI demo (smoke)
+<!-- Replace this image with a real GIF at docs/demo_smoke.gif -->
+![RTAx smoke run](docs/demo_smoke.gif)
+
 ## How RTAx differs from other red-team repos
-
 - **Contracts over internals:** We publish stable artifact formats and interfaces so others can integrate without needing our private prompts or configs.
 - **Privacy-first by design:** Redactions and scrubbing are part of the default workflow; reports are shareable without leaking secrets.
 - **Suite registry + policy gate separation:** Attack definition, evaluation policy, and reporting are decoupled so teams can swap one layer without breaking the rest.
 - **TUI/CLI parity:** A thin CLI is the source of truth; the TUI is just a front-end, making CI and local runs consistent.
 - **Reproducible runs:** Lightweight run metadata (suite, model alias, seed, timestamps) enables repeatable testing without exposing provider details.
 
+---
 
+Apache License 2.0 — see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).
+
+## License
