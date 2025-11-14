@@ -44,3 +44,15 @@ flowchart LR
   A --> B
 ```
 
+
+```markdown
+# FILE: README_addon_how_diffs.md
+## How RTAx differs from other red-team repos
+
+- **Contracts over internals:** We publish stable artifact formats and interfaces so others can integrate without needing our private prompts or configs.
+- **Privacy-first by design:** Redactions and scrubbing are part of the default workflow; reports are shareable without leaking secrets.
+- **Suite registry + policy gate separation:** Attack definition, evaluation policy, and reporting are decoupled so teams can swap one layer without breaking the rest.
+- **TUI/CLI parity:** A thin CLI is the source of truth; the TUI is just a front-end, making CI and local runs consistent.
+- **Reproducible runs:** Lightweight run metadata (suite, model alias, seed, timestamps) enables repeatable testing without exposing provider details.
+
+
