@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://robbyb480.github.io/rtax/schema/metrics.schema.json",
+  "title": "RTAx Metrics",
+  "description": "Aggregate evaluation metrics for a single run directory.",
+  "type": "object",
+  "required": ["counts", "max_severity", "ok"],
+  "properties": {
+    "counts": {
+      "type": "object",
+      "required": ["violations", "by_category"],
+      "properties": {
+        "violations": { "type": "integer", "minimum": 0 },
+        "by_category": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "max_severity": { "type": "string", "enum": ["none", "low", "medium", "high", "critical"] },
+    "ok": { "type": "boolean" }
+  },
+  "additionalProperties": true,
+  "examples": [
+    {
+      "counts": { "violations": 1, "by_category": { "prompt_injection": 1 } },
+      "max_severity": "medium",
+      "ok": false
+    }
+  ]
+}
